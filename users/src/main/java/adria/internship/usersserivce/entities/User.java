@@ -33,8 +33,6 @@ public abstract class User implements Serializable {
     @ManyToOne
     protected Agence agence;
     @ManyToOne
-    protected Admin admin;
-    @ManyToOne
     protected Profile profile;
 
 
