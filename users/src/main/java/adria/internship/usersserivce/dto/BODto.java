@@ -1,14 +1,16 @@
 package adria.internship.usersserivce.dto;
 
-import adria.internship.usersserivce.entities.Admin;
-import adria.internship.usersserivce.entities.Agence;
-import adria.internship.usersserivce.entities.Profile;
-import adria.internship.usersserivce.entities.Ville;
+
 import adria.internship.usersserivce.enums.Sexe;
 import adria.internship.usersserivce.enums.Statut;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class BODto {
     private Long id;
     private String nom;
@@ -23,9 +25,9 @@ public class BODto {
     private Date dateNaissance;
     private Statut statut;
     private Sexe sexe;
-    private Ville ville;
-    private Agence agence;
-    private Admin admin;
-    private Profile profile;
+    private VilleDto villeDto;
+    private AgenceDto agenceDto;
+    private AdminDto adminDto;
+    private ProfileDto profileDto;
 
 }
