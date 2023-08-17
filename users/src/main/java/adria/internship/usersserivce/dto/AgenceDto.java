@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AgenceDto {
 
-    private int id;
+    private Long id;
     private String intituleAgence;
     private Long code;
 

@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Agence {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String intituleAgence;
     private Long code;
     @OneToMany(mappedBy = "agence", fetch = FetchType.LAZY)

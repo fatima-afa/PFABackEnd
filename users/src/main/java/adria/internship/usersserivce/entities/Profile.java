@@ -12,7 +12,7 @@ import java.util.List;
 public class Profile {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String profile;
     @OneToMany(mappedBy = "profile", fetch = FetchType.LAZY)
     private List<Role> roles;
