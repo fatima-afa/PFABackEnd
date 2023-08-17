@@ -1,6 +1,6 @@
 package adria.internship.usersserivce.entities;
 
-import adria.internship.usersserivce.enums.StatutDevise;
+import adria.internship.usersserivce.enums.Statut;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,7 +17,7 @@ public class Devise {
     private String code;
     private Long numero;
     private Double tauxEchange;
-    private StatutDevise statutDevise;
+    private Statut statutDevise;
     @OneToMany(mappedBy = "devise", fetch = FetchType.LAZY)
     private  List<Pays> pays;
     @ManyToOne

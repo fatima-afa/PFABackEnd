@@ -36,8 +36,4 @@ public abstract class User implements Serializable {
     protected Profile profile;
 
 
-
-
-
-
 }

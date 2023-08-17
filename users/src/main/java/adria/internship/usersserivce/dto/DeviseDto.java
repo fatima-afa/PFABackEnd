@@ -2,7 +2,7 @@ package adria.internship.usersserivce.dto;
 
 import adria.internship.usersserivce.entities.Admin;
 import adria.internship.usersserivce.entities.Pays;
-import adria.internship.usersserivce.enums.StatutDevise;
+import adria.internship.usersserivce.enums.Statut;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -19,6 +19,6 @@ public class DeviseDto {
     private String code;
     private Long numero;
     private Double tauxEchange;
-    private StatutDevise statutDevise;
+    private Statut statutDevise;
     private AdminDto adminDto;
 }
