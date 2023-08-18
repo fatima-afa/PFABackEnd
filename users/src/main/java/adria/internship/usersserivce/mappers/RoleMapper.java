@@ -2,8 +2,12 @@ package adria.internship.usersserivce.mappers;
 
 import adria.internship.usersserivce.dto.RoleDto;
 import adria.internship.usersserivce.entities.Role;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
+@Service
+@AllArgsConstructor
 public class RoleMapper {
 
     private ProfileMapper profileMapper;

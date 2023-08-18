@@ -2,8 +2,12 @@ package adria.internship.usersserivce.mappers;
 
 import adria.internship.usersserivce.dto.AgenceDto;
 import adria.internship.usersserivce.entities.Agence;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
+@Service
+@AllArgsConstructor
 public class AgenceMapper {
     private VilleMapper villeMapper;
 

@@ -2,8 +2,12 @@ package adria.internship.usersserivce.mappers;
 
 import adria.internship.usersserivce.dto.ParameterGlobaleDto;
 import adria.internship.usersserivce.entities.ParameterGlobale;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
+@Service
+@AllArgsConstructor
 public class ParameterGlobaleMapper {
 
     private AdminMapper adminMapper;

@@ -4,8 +4,12 @@ import adria.internship.usersserivce.dto.DeviseDto;
 import adria.internship.usersserivce.dto.PaysDto;
 import adria.internship.usersserivce.entities.Devise;
 import adria.internship.usersserivce.entities.Pays;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
+@Service
+@AllArgsConstructor
 public class PaysMapper {
     private DeviseMapper deviseMapper;
 

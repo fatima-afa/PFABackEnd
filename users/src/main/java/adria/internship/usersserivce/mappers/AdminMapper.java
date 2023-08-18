@@ -2,8 +2,12 @@ package adria.internship.usersserivce.mappers;
 
 import adria.internship.usersserivce.dto.AdminDto;
 import adria.internship.usersserivce.entities.Admin;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
+@Service
+@AllArgsConstructor
 public class AdminMapper {
 
     private VilleMapper villeMapper;

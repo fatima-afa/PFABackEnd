@@ -2,8 +2,12 @@ package adria.internship.usersserivce.mappers;
 
 import adria.internship.usersserivce.dto.VilleDto;
 import adria.internship.usersserivce.entities.Ville;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
+@Service
+@AllArgsConstructor
 public class VilleMapper {
     public VilleDto villeToDto(Ville ville){
 

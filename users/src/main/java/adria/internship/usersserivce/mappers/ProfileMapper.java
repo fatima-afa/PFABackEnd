@@ -4,8 +4,12 @@ import adria.internship.usersserivce.dto.ProfileDto;
 import adria.internship.usersserivce.dto.VilleDto;
 import adria.internship.usersserivce.entities.Profile;
 import adria.internship.usersserivce.entities.Ville;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
+@Service
+@AllArgsConstructor
 public class ProfileMapper {
     public ProfileDto profileToDto(Profile profile){
 
