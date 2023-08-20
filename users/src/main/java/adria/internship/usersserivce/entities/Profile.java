@@ -14,8 +14,10 @@ public class Profile {
    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String profile;
+    @Column(nullable = true)
     @OneToMany(mappedBy = "profile", fetch = FetchType.LAZY)
     private List<Role> roles;
+    @Column(nullable = true)
     @OneToMany(mappedBy = "profile", fetch = FetchType.LAZY)
     private List<User> users;
 

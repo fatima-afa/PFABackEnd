@@ -18,10 +18,11 @@ public class Devise {
     private Long numero;
     private Double tauxEchange;
     private Statut statutDevise;
-    @OneToMany(mappedBy = "devise", fetch = FetchType.LAZY)
-    private  List<Pays> pays;
-    @ManyToOne
-    private Admin admin;
+   // @Column(nullable = true)
+   // @OneToMany(mappedBy = "devise", fetch = FetchType.LAZY)
+    //private  List<Pays> pays;
+    //@ManyToOne
+    //private Admin admin;
 
 
 }

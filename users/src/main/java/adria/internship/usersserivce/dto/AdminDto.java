@@ -26,8 +26,7 @@ public class AdminDto {
     private Date dateNaissance;
     private Statut statut;
     private Sexe sexe;
-
-    private VilleDto villeDto;
+   // private VilleDto villeDto;
     private AgenceDto agenceDto;
     //private AdminDto adminDto;
     private ProfileDto profileDto;

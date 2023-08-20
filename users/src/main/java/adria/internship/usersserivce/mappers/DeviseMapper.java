@@ -15,14 +15,14 @@ public class DeviseMapper {
         DeviseDto deviseDto = new DeviseDto();
 
         BeanUtils.copyProperties(devise, deviseDto);
-        deviseDto.setAdminDto(adminMapper.adminToDto(devise.getAdmin()));
+
         return deviseDto;
     }
 
     public Devise deviseDtoToDevise(DeviseDto deviseDto) {
         Devise devise = new Devise();
         BeanUtils.copyProperties(deviseDto, devise);
-        devise.setAdmin(adminMapper.adminDtoToAdmin(deviseDto.getAdminDto()));
+       // devise.setAdmin(adminMapper.adminDtoToAdmin(deviseDto.getAdminDto()));
         return devise;
     }
 }
