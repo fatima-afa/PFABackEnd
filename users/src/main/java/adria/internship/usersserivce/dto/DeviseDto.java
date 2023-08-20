@@ -20,5 +20,5 @@ public class DeviseDto {
     private Long numero;
     private Double tauxEchange;
     private Statut statutDevise;
-    //private AdminDto adminDto;
+    private AdminDto adminDto;
 }

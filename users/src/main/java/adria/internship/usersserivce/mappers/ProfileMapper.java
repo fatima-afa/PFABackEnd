@@ -14,16 +14,22 @@ public class ProfileMapper {
     public ProfileDto profileToDto(Profile profile){
 
         ProfileDto profileDto = new ProfileDto();
-        BeanUtils.copyProperties(profile, profileDto);
+        if(profile!=null){
+            BeanUtils.copyProperties(profile, profileDto);
 
-        return profileDto;
+            return profileDto;
+        }
+        return null;
     }
 
     public Profile profileDtoToProfile(ProfileDto profileDto){
 
         Profile profile = new Profile();
-        BeanUtils.copyProperties(profileDto, profile);
+        if(profileDto!=null){
+            BeanUtils.copyProperties(profileDto, profile);
 
-        return profile;
+            return profile;
+        }
+     return null;
     }
 }

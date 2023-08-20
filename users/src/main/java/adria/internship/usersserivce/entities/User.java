@@ -28,8 +28,7 @@ public abstract class User implements Serializable {
     protected Date dateNaissance;
     protected Statut statut;
     protected Sexe sexe;
-   // @ManyToOne
-    //protected Ville ville;
+
     @ManyToOne
     protected Agence agence;
     @ManyToOne

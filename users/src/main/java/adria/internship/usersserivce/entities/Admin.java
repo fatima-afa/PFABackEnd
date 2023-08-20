@@ -15,9 +15,9 @@ public class Admin extends User{
     private String matricule;
    // @Transient
     //private List<Admin> idAdmins;
-    //@Column(nullable = true)
-    //@OneToMany(mappedBy = "admin", fetch = FetchType.LAZY)
-    //private List<Devise> devises;
+    @Column(nullable = true)
+    @OneToMany(mappedBy = "admin", fetch = FetchType.LAZY)
+    private List<Devise> devises;
     @Column(nullable = true)
     @OneToMany(mappedBy = "admin", fetch = FetchType.LAZY)
     private List<ParameterGlobale> parameterGlobales;

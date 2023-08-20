@@ -17,6 +17,6 @@ public class Pays {
     @Column(nullable = true)
     @OneToMany(mappedBy = "pays", fetch = FetchType.LAZY)
     private List<Ville> villes;
-   // @ManyToOne
-    //private Devise devise;
+    @ManyToOne
+    private Devise devise;
 }

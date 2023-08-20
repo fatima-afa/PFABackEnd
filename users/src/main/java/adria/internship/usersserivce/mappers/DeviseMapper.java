@@ -13,16 +13,28 @@ public class DeviseMapper {
     private AdminMapper adminMapper;
     public DeviseDto deviseToDto(Devise devise) {
         DeviseDto deviseDto = new DeviseDto();
-
-        BeanUtils.copyProperties(devise, deviseDto);
-
-        return deviseDto;
+            if(devise!=null){
+                BeanUtils.copyProperties(devise, deviseDto);
+                if(devise.getAdmin()!=null)
+                    deviseDto.setAdminDto(adminMapper.adminToDto(devise.getAdmin()));
+                else
+                    deviseDto.setAdminDto(null);
+                return deviseDto;
+            }
+            return null;
     }
 
     public Devise deviseDtoToDevise(DeviseDto deviseDto) {
         Devise devise = new Devise();
-        BeanUtils.copyProperties(deviseDto, devise);
-       // devise.setAdmin(adminMapper.adminDtoToAdmin(deviseDto.getAdminDto()));
-        return devise;
+        if(deviseDto!=null){
+            BeanUtils.copyProperties(deviseDto, devise);
+            if(deviseDto.getAdminDto()!=null)
+             devise.setAdmin(adminMapper.adminDtoToAdmin(deviseDto.getAdminDto()));
+            else
+                devise.setAdmin(null);
+            return devise;
+        }
+        return null;
+
     }
 }

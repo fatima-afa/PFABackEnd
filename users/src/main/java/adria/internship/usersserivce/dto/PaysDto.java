@@ -13,6 +13,6 @@ import lombok.NoArgsConstructor;
 public class PaysDto {
     private Long id;
     private String nom;
-    //private DeviseDto deviseDto;
+    private DeviseDto deviseDto;
 
 }

@@ -13,16 +13,29 @@ public class VilleMapper {
     public VilleDto villeToDto(Ville ville){
 
         VilleDto villeDto = new VilleDto();
-        BeanUtils.copyProperties(ville, villeDto);
-        villeDto.setPaysDto(paysMapper.paysToDto(ville.getPays()));
-        return villeDto;
+        if(ville!=null){
+            BeanUtils.copyProperties(ville, villeDto);
+            if(ville.getPays()!=null)
+                villeDto.setPaysDto(paysMapper.paysToDto(ville.getPays()));
+            else
+                villeDto.setPaysDto(null);
+            return villeDto;
+        }
+        return null;
+
     }
 
     public Ville villeDtoToVille(VilleDto villeDto){
 
         Ville ville = new Ville();
-        BeanUtils.copyProperties(villeDto, ville);
-        ville.setPays(paysMapper.paysDtoToPays(villeDto.getPaysDto()));
-        return ville;
+        if(villeDto!=null){
+            BeanUtils.copyProperties(villeDto, ville);
+            if(villeDto.getPaysDto()!=null)
+                ville.setPays(paysMapper.paysDtoToPays(villeDto.getPaysDto()));
+            else
+                ville.setPays(null);
+            return ville;
+        }
+       return null;
     }
 }

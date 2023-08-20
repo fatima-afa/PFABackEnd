@@ -14,16 +14,29 @@ public class AgenceMapper {
     public AgenceDto agenceToDto(Agence agence){
 
         AgenceDto agenceDto = new AgenceDto();
-        BeanUtils.copyProperties(agence, agenceDto);
-        agenceDto.setVilleDto(villeMapper.villeToDto(agence.getVille()));
-        return agenceDto;
+        if(agence!=null){
+            BeanUtils.copyProperties(agence, agenceDto);
+            if(agence.getVille()!=null)
+                agenceDto.setVilleDto(villeMapper.villeToDto(agence.getVille()));
+            else
+                agenceDto.setVilleDto(null);
+
+            return agenceDto;
+        }
+        return null;
     }
 
     public Agence agenceDtoToAgence(AgenceDto agenceDto){
 
         Agence agence = new Agence();
-        BeanUtils.copyProperties(agenceDto, agence);
-        agence.setVille(villeMapper.villeDtoToVille(agenceDto.getVilleDto()));
-        return agence;
+        if(agenceDto!=null){
+            BeanUtils.copyProperties(agenceDto, agence);
+            if(agenceDto.getVilleDto()!=null)
+                agence.setVille(villeMapper.villeDtoToVille(agenceDto.getVilleDto()));
+            else
+                agence.setVille(null);
+            return agence;
+        }
+       return null;
     }
 }

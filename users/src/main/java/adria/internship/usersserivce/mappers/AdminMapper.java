@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class AdminMapper {
 
-   // private VilleMapper villeMapper;
     private AgenceMapper agenceMapper;
     private ProfileMapper profileMapper;
 

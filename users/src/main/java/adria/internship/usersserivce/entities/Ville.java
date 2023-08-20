@@ -20,5 +20,7 @@ public class Ville {
     @Column(nullable = true)
     @OneToMany(mappedBy = "ville", fetch = FetchType.LAZY)
     private List<Agence> agences;
+    @OneToMany(mappedBy = "ville", fetch = FetchType.LAZY)
+    private List<BO> bos;
 
 }

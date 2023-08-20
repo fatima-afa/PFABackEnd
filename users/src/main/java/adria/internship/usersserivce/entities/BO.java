@@ -1,5 +1,6 @@
 package adria.internship.usersserivce.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
@@ -12,4 +13,6 @@ public class BO extends User {
     private String matricule;
     @ManyToOne
     private Admin admin;
+    @ManyToOne
+    protected Ville ville;
 }
