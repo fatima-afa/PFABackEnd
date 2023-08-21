@@ -30,7 +30,7 @@ public class UsersApplication {
 				PaysDto paysDto1=villeService.savePays(paysDto);
 				VilleDto villeDto=new VilleDto();
 				villeDto.setNom(ville);
-				villeDto.setPaysDto(null);
+				villeDto.setPaysDto(paysDto1);
 				VilleDto villeDto1=villeService.saveVille(villeDto);
 				ProfileDto profileDto=new ProfileDto();
 				profileDto.setProfile(ville);
@@ -43,10 +43,10 @@ public class UsersApplication {
 					AdminDto adminDto=new AdminDto();
 					adminDto.setNom(ville);
 					adminDto.setEmail(ville+"@gmail.com");
-					//adminDto.setAgenceDto(agenceDto1);
-					adminDto.setAgenceDto(null);
-					//adminDto.setProfileDto(profileDto1);
-					adminDto.setProfileDto(null);
+					adminDto.setAgenceDto(agenceDto1);
+					//adminDto.setAgenceDto(null);
+					adminDto.setProfileDto(profileDto1);
+					//adminDto.setProfileDto(null);
 					userService.saveAdmin(adminDto);
 				//});
 			});

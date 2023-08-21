@@ -30,8 +30,7 @@ public abstract class User implements Serializable {
     @Enumerated(EnumType.STRING)
     protected Statut statut;
     protected Sexe sexe;
-   // @ManyToOne
-    //protected Ville ville;
+
     @ManyToOne
     protected Agence agence;
     @ManyToOne

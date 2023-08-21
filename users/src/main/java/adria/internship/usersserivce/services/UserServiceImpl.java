@@ -35,10 +35,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public AdminDto saveAdmin(AdminDto adminDto) {
         Admin admin=adminMapper.adminDtoToAdmin(adminDto);
-        //admin.setAgence(agenceMapper.agenceDtoToAgence(adminDto.getAgenceDto()));
-        //admin.setProfile(profileMapper.profileDtoToProfile(adminDto.getProfileDto()));
-        admin.setAgence(null);
-        admin.setProfile(null);
+        admin.setAgence(agenceMapper.agenceDtoToAgence(adminDto.getAgenceDto()));
+        admin.setProfile(profileMapper.profileDtoToProfile(adminDto.getProfileDto()));
+      //  admin.setAgence(null);
+        //admin.setProfile(null);
         Admin savedAdmin=adminRepository.save(admin);
         log.info("admin = "+savedAdmin);
         return adminMapper.adminToDto(savedAdmin);

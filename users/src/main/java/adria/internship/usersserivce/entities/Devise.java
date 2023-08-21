@@ -21,11 +21,11 @@ public class Devise {
 
     @Enumerated(EnumType.STRING)
     private Statut statutDevise;
-   // @Column(nullable = true)
-   // @OneToMany(mappedBy = "devise", fetch = FetchType.LAZY)
-    //private  List<Pays> pays;
-    //@ManyToOne
-    //private Admin admin;
+    @Column(nullable = true)
+    @OneToMany(mappedBy = "devise", fetch = FetchType.LAZY)
+    private  List<Pays> pays;
+    @ManyToOne
+    private Admin admin;
 
 
 }
