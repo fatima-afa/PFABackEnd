@@ -14,8 +14,9 @@ public class Pays {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
+    @Column(nullable = true)
     @OneToMany(mappedBy = "pays", fetch = FetchType.LAZY)
     private List<Ville> villes;
-    @ManyToOne
-    private Devise devise;
+   // @ManyToOne
+    //private Devise devise;
 }

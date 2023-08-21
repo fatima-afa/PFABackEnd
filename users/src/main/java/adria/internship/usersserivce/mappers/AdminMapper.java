@@ -10,25 +10,47 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class AdminMapper {
 
-    private VilleMapper villeMapper;
+   // private VilleMapper villeMapper;
     private AgenceMapper agenceMapper;
     private ProfileMapper profileMapper;
 
     public AdminDto adminToDto(Admin admin) {
         AdminDto adminDto = new AdminDto();
-        BeanUtils.copyProperties(admin, adminDto);
-        adminDto.setVilleDto(villeMapper.villeToDto(admin.getVille()));
-        adminDto.setAgenceDto(agenceMapper.agenceToDto(admin.getAgence()));
-        adminDto.setProfileDto(profileMapper.profileToDto(admin.getProfile()));
-        return adminDto;
+        if(admin!=null){
+            BeanUtils.copyProperties(admin, adminDto);
+            if(admin.getAgence()!=null)
+                 adminDto.setAgenceDto(agenceMapper.agenceToDto(admin.getAgence()));
+            else
+                adminDto.setAgenceDto(null);
+            if(adminDto.getProfileDto()!=null)
+                adminDto.setProfileDto(profileMapper.profileToDto(admin.getProfile()));
+            else
+                adminDto.setProfileDto(null);
+            return adminDto;
+        }
+
+       // adminDto.setVilleDto(villeMapper.villeToDto(admin.getVille()));
+
+        return null;
     }
 
     public Admin adminDtoToAdmin(AdminDto adminDto) {
         Admin admin = new Admin();
-        BeanUtils.copyProperties(adminDto, admin);
-        admin.setVille(villeMapper.villeDtoToVille(adminDto.getVilleDto()));
-        admin.setAgence(agenceMapper.agenceDtoToAgence(adminDto.getAgenceDto()));
-        admin.setProfile(profileMapper.profileDtoToProfile(adminDto.getProfileDto()));
-        return admin;
+        if(adminDto!=null){
+            BeanUtils.copyProperties(adminDto, admin);
+            //  admin.setVille(villeMapper.villeDtoToVille(adminDto.getVilleDto()));
+            if(adminDto.getAgenceDto()!=null)
+                 admin.setAgence(agenceMapper.agenceDtoToAgence(adminDto.getAgenceDto()));
+            else
+                admin.setAgence(null);
+            if (adminDto.getProfileDto()!=null)
+                admin.setProfile(profileMapper.profileDtoToProfile(adminDto.getProfileDto()));
+            else
+                admin.setProfile(null);
+            return admin;
+
+        }
+
+        return null;
     }
 }

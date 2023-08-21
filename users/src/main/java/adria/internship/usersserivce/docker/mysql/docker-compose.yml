@@ -1,13 +1,13 @@
 version: '3'
 services:
-  db:
+  localhost:
     image: mysql:latest
     container_name: my_mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=fatima
-      - MYSQL_DATABASE=fatima
-      - MYSQL_USER=fatima
-      - MYSQL_PASSWORD=1234
+      - MYSQL_ROOT_PASSWORD:fatima
+      - MYSQL_DATABASE:root
+      - MYSQL_USER:fatima
+      - MYSQL_PASSWORD:1235
     volumes:
       - mysql_data:/var/lib/mysql
     ports:
@@ -16,10 +16,11 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: my_phpmyadmin
-    links:
-      - db:db
     ports:
       - "8080:80"
+    depends_on:
+      - localhost
     restart: always
+
 volumes:
   mysql_data:

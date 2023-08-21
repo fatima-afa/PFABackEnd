@@ -17,6 +17,7 @@ public class Ville {
     private String nom;
     @ManyToOne
     private Pays pays;
+    @Column(nullable = true)
     @OneToMany(mappedBy = "ville", fetch = FetchType.LAZY)
     private List<Agence> agences;
 

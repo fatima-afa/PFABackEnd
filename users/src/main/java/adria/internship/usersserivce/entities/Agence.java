@@ -15,6 +15,7 @@ public class Agence {
     private Long id;
     private String intituleAgence;
     private Long code;
+    @Column(nullable = true)
     @OneToMany(mappedBy = "agence", fetch = FetchType.LAZY)
     private List<User> users;
     @ManyToOne

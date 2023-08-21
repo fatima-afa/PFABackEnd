@@ -7,7 +7,9 @@ import adria.internship.usersserivce.entities.BO;
 import adria.internship.usersserivce.exceptions.AdminNotFound;
 import adria.internship.usersserivce.exceptions.BONotFound;
 import adria.internship.usersserivce.mappers.AdminMapper;
+import adria.internship.usersserivce.mappers.AgenceMapper;
 import adria.internship.usersserivce.mappers.BOMapper;
+import adria.internship.usersserivce.mappers.ProfileMapper;
 import adria.internship.usersserivce.repositories.AdminRepository;
 import adria.internship.usersserivce.repositories.BORepository;
 import lombok.AllArgsConstructor;
@@ -28,14 +30,17 @@ public class UserServiceImpl implements UserService {
     private BORepository boRepository;
     private AdminMapper adminMapper;
     private BOMapper boMapper;
-
+    private AgenceMapper agenceMapper;
+    private ProfileMapper profileMapper;
     @Override
     public AdminDto saveAdmin(AdminDto adminDto) {
         Admin admin=adminMapper.adminDtoToAdmin(adminDto);
+        //admin.setAgence(agenceMapper.agenceDtoToAgence(adminDto.getAgenceDto()));
+        //admin.setProfile(profileMapper.profileDtoToProfile(adminDto.getProfileDto()));
+        admin.setAgence(null);
+        admin.setProfile(null);
         Admin savedAdmin=adminRepository.save(admin);
         log.info("admin = "+savedAdmin);
-
-
         return adminMapper.adminToDto(savedAdmin);
     }
 
@@ -120,8 +125,7 @@ public class UserServiceImpl implements UserService {
                 .stream()
                 .map(admin -> adminMapper.adminToDto(admin))
                 .collect(Collectors.toList());
-        adminDtos.forEach(candidatDto -> {
-        });
+
         return adminDtos;       }
 
     @Override
