@@ -1,6 +1,6 @@
 version: '3'
 services:
-  localhost:
+  db:
     image: mysql:latest
     container_name: my_mysql
     environment:
@@ -17,9 +17,9 @@ services:
     image: phpmyadmin/phpmyadmin:latest
     container_name: my_phpmyadmin
     ports:
-      - "8080:80"
+      - "8084:80"
     depends_on:
-      - localhost
+      - db
     restart: always
 
 volumes:
