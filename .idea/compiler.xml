@@ -9,12 +9,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="users-serivce" />
         <module name="devise" />
+        <module name="discovery-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
       <module name="devise" options="-parameters" />
+      <module name="discovery-service" options="-parameters" />
       <module name="users-serivce" options="-parameters" />
     </option>
   </component>
