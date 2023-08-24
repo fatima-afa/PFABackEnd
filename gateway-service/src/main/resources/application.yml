@@ -6,21 +6,24 @@ spring:
           uri : http://localhost:8082
           predicates:
             - Path= /user/**
+          filters:
+            - SetResponseHeader=Access-Control-Allow-Origin,http://localhost:3000 # Définir l'origine autorisée
+            - SetResponseHeader=Access-Control-Allow-Methods,GET,POST,PUT,DELETE # Définir les méthodes autorisées
+            - SetResponseHeader=Access-Control-Allow-Headers,* # Définir les en-têtes autorisés
         - id: r2
           uri: http://localhost:8083
           predicates:
             - Path= /devise/**
+          filters:
+            - SetResponseHeader=Access-Control-Allow-Origin,http://localhost:3000 # Définir l'origine autorisée
+            - SetResponseHeader=Access-Control-Allow-Methods,GET,POST,PUT,DELETE # Définir les méthodes autorisées
+            - SetResponseHeader=Access-Control-Allow-Headers,* # Définir les en-têtes autorisés
         - id: discovery-server
           uri: http://localhost:8761
           predicates:
             - Path= /eureka/**
     discovery:
-      enabled: false
-    globalcors:
-      cors-configurations:
-        '[/**]':
-          allowedOrigins: "*"
-          allowedMethods: "*"
-          allowed-headers: "*"
+
+      enabled: true
 server:
   port: 8888
