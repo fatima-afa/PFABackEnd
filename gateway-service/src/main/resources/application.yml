@@ -16,5 +16,11 @@ spring:
             - Path= /eureka/**
     discovery:
       enabled: false
+    globalcors:
+      cors-configurations:
+        '[/**]':
+          allowedOrigins: "*"
+          allowedMethods: "*"
+          allowed-headers: "*"
 server:
   port: 8888
