@@ -3,9 +3,9 @@ package adria.internship.dto;
 
 
 import adria.internship.enums.Statut;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -18,4 +18,6 @@ public class DeviseDto {
     private Double tauxEchange;
     private Statut statutDevise;
     private AdminDto adminDto;
+    private List<PaysDto> pays;
+
 }
