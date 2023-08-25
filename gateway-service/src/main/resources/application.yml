@@ -6,10 +6,6 @@ spring:
           uri : http://localhost:8082
           predicates:
             - Path= /user/**
-          filters:
-            - SetResponseHeader=Access-Control-Allow-Origin,http://localhost:3000 # Définir l'origine autorisée
-            - SetResponseHeader=Access-Control-Allow-Methods,GET,POST,PUT,DELETE,PATCH # Définir les méthodes autorisées
-            - SetResponseHeader=Access-Control-Allow-Headers,* # Définir les en-têtes autorisés
         - id: r2
           uri: http://localhost:8083
           predicates:
@@ -19,7 +15,6 @@ spring:
           predicates:
             - Path= /eureka/**
     discovery:
-
       enabled: true
 server:
   port: 8888

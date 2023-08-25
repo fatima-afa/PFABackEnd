@@ -8,19 +8,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="devise-service" />
+        <module name="users-serivce" />
+        <module name="devise" />
         <module name="gateway-service" />
         <module name="discovery-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="users-serivce" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="devise" options="-parameters" />
       <module name="devise-service" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
+      <module name="users-serivce" options="-parameters" />
     </option>
   </component>
 </project>
