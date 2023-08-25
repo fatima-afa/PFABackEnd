@@ -19,6 +19,7 @@ spring:
           predicates:
             - Path= /eureka/**
     discovery:
+
       enabled: true
 server:
   port: 8888
