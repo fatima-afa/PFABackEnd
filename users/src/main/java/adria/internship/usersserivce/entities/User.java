@@ -26,7 +26,7 @@ public abstract class User implements Serializable {
     protected String CIN;
     protected String adresse;
     protected Date dateNaissance;
-
+    protected String type;
     @Enumerated(EnumType.STRING)
     protected Statut statut;
     protected Sexe sexe;

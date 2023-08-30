@@ -17,7 +17,7 @@ public class BODto {
     private String prenom;
     private String nomUtilisateur;
     private String matricule;
-
+    private String type;
     private String password;
     private String email;
     private String CIN;

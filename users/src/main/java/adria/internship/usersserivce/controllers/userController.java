@@ -90,7 +90,7 @@ public class userController {
     }
 
     //----------------------------------------------------
-    @PostMapping("/bos")
+    @PostMapping("/bo")
     public ResponseEntity<BODto> createBO(@RequestBody BODto boDto) {
         BODto createdBO = userService.saveBO(boDto);
         return new ResponseEntity<>(createdBO, HttpStatus.CREATED);
