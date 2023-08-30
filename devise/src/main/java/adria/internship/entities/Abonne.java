@@ -24,6 +24,11 @@ public class Abonne extends User{
     @OneToMany(mappedBy = "abonne",fetch = FetchType.LAZY)
     private List<Compte> comptes;
 
-//    @ManyToOne
-//    private List<Contrat> contrats;
+    @ManyToMany
+    @JoinTable(
+            name = "abonne_contrat",
+            joinColumns = @JoinColumn(name = "abonne_id"),
+            inverseJoinColumns = @JoinColumn(name = "contrat_id")
+    )
+    private List<Contrat> contrats;
 }

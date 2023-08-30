@@ -29,6 +29,6 @@ public class Contrat {
 
     private TypeContrat typeContrat;
 
-//    @ManyToMany
-//    private List<Abonne> abonnes;
+    @ManyToMany(mappedBy = "contrats")
+    private List<Abonne> abonnes;
 }
