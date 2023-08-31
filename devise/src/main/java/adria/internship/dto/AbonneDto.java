@@ -6,14 +6,15 @@ import adria.internship.enums.Statut;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.Date;
 import java.util.List;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
-public class BODto {
+@NoArgsConstructor @ToString
+public class AbonneDto {
     private Long id;
     private String nom;
     private String prenom;
@@ -25,15 +26,13 @@ public class BODto {
     private String CIN;
     private String adresse;
     private Date dateNaissance;
+
     private Statut statut;
     private Sexe sexe;
-    private VilleDto villeDto;
-    private AgenceDto agenceDto;
-    private AdminDto adminDto;
-    private ProfileDto profileDto;
 
-    private AbonneDto abonnes;
+
+    private BODto bo;
     private MessageDto messages;
-
-
+    private CompteDto comptes;
+    private ContratDto contrats;
 }

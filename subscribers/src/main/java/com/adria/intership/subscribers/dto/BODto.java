@@ -1,4 +1,4 @@
-package adria.internship.dto;
+package com.adria.intership.subscribers.dto;
 
 
 import adria.internship.enums.Sexe;
@@ -8,7 +8,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.List;
 
 @Data
 @AllArgsConstructor

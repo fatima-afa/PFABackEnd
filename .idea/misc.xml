@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/devise/pom.xml" />
         <option value="$PROJECT_DIR$/discovery-service/pom.xml" />
         <option value="$PROJECT_DIR$/users/pom.xml" />
+        <option value="$PROJECT_DIR$/subscribers/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,19 +1,17 @@
-package adria.internship.dto;
+package com.adria.intership.subscribers.dto;
 
-
-import adria.internship.enums.Sexe;
-import adria.internship.enums.Statut;
+import com.adria.intership.subscribers.enums.Sexe;
+import com.adria.intership.subscribers.enums.Statut;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BODto {
+public class AdminDto {
     private Long id;
     private String nom;
     private String prenom;
@@ -25,15 +23,13 @@ public class BODto {
     private String CIN;
     private String adresse;
     private Date dateNaissance;
+
     private Statut statut;
     private Sexe sexe;
+
     private VilleDto villeDto;
     private AgenceDto agenceDto;
-    private AdminDto adminDto;
+    //private AdminDto adminDto;
     private ProfileDto profileDto;
-
-    private AbonneDto abonnes;
-    private MessageDto messages;
-
 
 }

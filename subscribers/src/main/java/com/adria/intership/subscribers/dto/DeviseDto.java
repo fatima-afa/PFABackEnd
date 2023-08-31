@@ -1,11 +1,10 @@
-package adria.internship.dto;
-
+package com.adria.intership.subscribers.dto;
 
 
 import adria.internship.enums.Statut;
-import lombok.*;
-
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
