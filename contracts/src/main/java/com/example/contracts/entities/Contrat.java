@@ -1,10 +1,12 @@
-package adria.internship.usersserivce.entities;
+package com.example.contracts.entities;
 
-import adria.internship.usersserivce.enums.StatutContrat;
-import adria.internship.usersserivce.enums.TypeContrat;
+
+import com.example.contracts.enums.StatutContrat;
+import com.example.contracts.enums.TypeContrat;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -33,4 +35,7 @@ public class Contrat {
 
     @ManyToMany(mappedBy = "contrats")
     private List<Abonne> abonnes;
+
+    @ManyToOne
+    private BO bo;
 }

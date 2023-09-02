@@ -1,34 +1,23 @@
-package adria.internship.entities;
+package com.example.contracts.dto;
 
-import adria.internship.enums.StatutContrat;
-import adria.internship.enums.TypeContrat;
-import jakarta.persistence.*;
+import com.example.contracts.enums.StatutContrat;
+import com.example.contracts.enums.TypeContrat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import java.util.Date;
-import java.util.List;
-
-@Entity
-@AllArgsConstructor
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
-@ToString
-public class Contrat {
-
-    @Id
+public class ContratDto {
     private String id;
-
     private Date dateActivation;
     private Date dateCreation;
     private StatutContrat statut;
     private int nbMaxTransfert;
     private int nbMinTransfert;
-
     private TypeContrat typeContrat;
-
-    @ManyToMany(mappedBy = "contrats")
-    private List<Abonne> abonnes;
+  //  private List<Abonne> abonnes;
+    private BODto boDto;
 }

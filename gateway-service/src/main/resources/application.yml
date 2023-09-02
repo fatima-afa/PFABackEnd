@@ -10,6 +10,10 @@ spring:
           uri: http://localhost:8083
           predicates:
             - Path= /devise/**
+        - id: r3
+          uri: http://localhost:8086
+          predicates:
+            - Path= /user/contracts/**
         - id: discovery-server
           uri: http://localhost:8761
           predicates:
