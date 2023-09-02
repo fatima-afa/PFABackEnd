@@ -1,5 +1,6 @@
 package adria.internship.usersserivce.services;
 
+import adria.internship.usersserivce.dto.AdminDto;
 import adria.internship.usersserivce.dto.AgenceDto;
 import adria.internship.usersserivce.entities.Admin;
 import adria.internship.usersserivce.entities.Agence;
@@ -12,6 +13,9 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -33,5 +37,16 @@ public class AgenceServiceImpl implements AgenceService {
         Agence existingAgence = agenceRepository.findById(id)
                 .orElseThrow(() -> new AgenceNotFound("agence not found"));
         return agenceMapper.agenceToDto(existingAgence);
+    }
+    @Override
+    public List<AgenceDto> allAgences() {
+        List<Agence> agences=agenceRepository.findAll();
+        List<AgenceDto> agenceDtos=agences
+                .stream()
+                .map(agence -> agenceMapper.agenceToDto(agence))
+                .collect(Collectors.toList());
+        agenceDtos.forEach(candidatDto -> {
+        });
+        return agenceDtos;
     }
 }

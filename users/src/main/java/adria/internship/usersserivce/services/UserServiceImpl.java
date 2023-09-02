@@ -39,7 +39,9 @@ public class UserServiceImpl implements UserService {
         admin.setProfile(profileMapper.profileDtoToProfile(adminDto.getProfileDto()));
       //  admin.setAgence(null);
         //admin.setProfile(null);
+        admin.setType("admin");
         Admin savedAdmin=adminRepository.save(admin);
+
         log.info("admin = "+savedAdmin);
         return adminMapper.adminToDto(savedAdmin);
     }
@@ -59,6 +61,11 @@ public class UserServiceImpl implements UserService {
         existingAdmin.setNom(adminDto.getNom());
         existingAdmin.setEmail(adminDto.getEmail());
         existingAdmin.setPrenom(adminDto.getPrenom());
+        existingAdmin.setAdresse(adminDto.getAdresse());
+        existingAdmin.setType("admin");
+        existingAdmin.setAgence(agenceMapper.agenceDtoToAgence(adminDto.getAgenceDto()));
+        existingAdmin.setStatut(adminDto.getStatut());
+
         // idk what to update exactly ...
         adminRepository.save(existingAdmin);
 
@@ -142,6 +149,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public BODto saveBO(BODto boDto) {
         BO bo=boMapper.boDtoTobo(boDto);
+        bo.setType("bo");
         BO savedBO=boRepository.save(bo);
         log.info("bo = "+savedBO);
         return boMapper.boToDto(savedBO);
@@ -161,6 +169,9 @@ public class UserServiceImpl implements UserService {
 
             existingBO.setNom(boDto.getNom());
             existingBO.setEmail(boDto.getEmail());
+            existingBO.setAdresse(boDto.getAdresse());
+            existingBO.setStatut(boDto.getStatut());
+            existingBO.setType("bo");
             // Update other properties as needed
 
             boRepository.save(existingBO);
