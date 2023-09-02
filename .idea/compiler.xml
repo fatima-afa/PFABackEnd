@@ -14,9 +14,13 @@
         <module name="discovery-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="contrat" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="contrat" options="-parameters" />
       <module name="devise" options="-parameters" />
       <module name="devise-service" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
