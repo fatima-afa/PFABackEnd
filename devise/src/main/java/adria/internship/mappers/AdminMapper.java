@@ -1,6 +1,6 @@
 package adria.internship.mappers;
 
-;
+
 import adria.internship.dto.AdminDto;
 import adria.internship.entities.Admin;
 import lombok.AllArgsConstructor;

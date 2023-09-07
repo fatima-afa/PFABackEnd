@@ -9,7 +9,7 @@
         <option value="$PROJECT_DIR$/discovery-service/pom.xml" />
         <option value="$PROJECT_DIR$/users/pom.xml" />
         <option value="$PROJECT_DIR$/subscribers/pom.xml" />
-        <option value="$PROJECT_DIR$/contrat/pom.xml" />
+        <option value="$PROJECT_DIR$/contracts/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

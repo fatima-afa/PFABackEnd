@@ -29,6 +29,8 @@ public abstract class User implements Serializable {
 
     @Enumerated(EnumType.STRING)
     protected Statut statut;
+
+    @Enumerated(EnumType.STRING)
     protected Sexe sexe;
     @ManyToOne
     protected Ville ville;

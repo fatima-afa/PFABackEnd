@@ -18,8 +18,7 @@ public class AbonneDto {
     private String nom;
     private String prenom;
     private String nomUtilisateur;
-    private String matricule;
-
+    private String token;
     private String password;
     private String email;
     private String CIN;

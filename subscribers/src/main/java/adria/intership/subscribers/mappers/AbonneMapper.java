@@ -16,9 +16,9 @@ import java.util.List;
 public class AbonneMapper {
 
     private BOMapper boMapper;
-    private MessageMapper messageMapper;
-    private CompteMapper compteMapper;
-    private ContratMapper contratMapper;
+//    private MessageMapper messageMapper;
+//    private CompteMapper compteMapper;
+//    private ContratMapper contratMapper;
 
     public AbonneDto abonneToDto(Abonne abonne) {
         AbonneDto abonneDto = new AbonneDto();
@@ -29,17 +29,17 @@ public class AbonneMapper {
                 abonneDto.setBo(boMapper.boToDto(abonne.getBo()));
             }
 
-            if (abonne.getMessages() != null) {
-                abonneDto.setMessages(messageMapper.messageToDto((Message) abonne.getMessages()));
-            }
-
-            if (abonne.getComptes() != null) {
-                abonneDto.setComptes(compteMapper.compteToDto((Compte) abonne.getComptes()));
-            }
-
-            if (abonne.getContrats() != null) {
-                abonneDto.setContrats(contratMapper.contratToDto((Contrat) abonne.getContrats()));
-            }
+//            if (abonne.getMessages() != null) {
+//                abonneDto.setMessages(messageMapper.messageToDto((Message) abonne.getMessages()));
+//            }
+//
+//            if (abonne.getComptes() != null) {
+//                abonneDto.setComptes(compteMapper.compteToDto((Compte) abonne.getComptes()));
+//            }
+//
+//            if (abonne.getContrats() != null) {
+//                abonneDto.setContrats(contratMapper.contratToDto((Contrat) abonne.getContrats()));
+//            }
         }
         return abonneDto;
     }
@@ -53,17 +53,18 @@ public class AbonneMapper {
                 abonne.setBo(boMapper.boDtoTobo(abonneDto.getBo()));
             }
 
-            if (abonneDto.getMessages() != null) {
-                abonne.setMessages((List<Message>) messageMapper.messageDtoToMessage(abonneDto.getMessages()));
-            }
-
-            if (abonneDto.getComptes() != null) {
-                abonne.setComptes((List<Compte>) compteMapper.compteDtoToCompte(abonneDto.getComptes()));
-            }
-
-            if (abonneDto.getContrats() != null) {
-                abonne.setContrats((List<Contrat>) contratMapper.DtoTocontrat(abonneDto.getContrats()));
-            }
+//            if (abonneDto.getMessages() != null) {
+//                abonne.setMessages((List<Message>) messageMapper.messageDtoToMessage(abonneDto.getMessages()));
+//            }
+//
+//
+//            if (abonneDto.getComptes() != null) {
+//                abonne.setComptes((List<Compte>) compteMapper.compteDtoToCompte(abonneDto.getComptes()));
+//            }
+//
+//            if (abonneDto.getContrats() != null) {
+//                abonne.setContrats((List<Contrat>) contratMapper.DtoTocontrat(abonneDto.getContrats()));
+//            }
         }
         return abonne;
     }

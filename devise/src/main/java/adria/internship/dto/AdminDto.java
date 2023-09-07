@@ -31,7 +31,6 @@ public class AdminDto {
 
     private VilleDto villeDto;
     private AgenceDto agenceDto;
-    //private AdminDto adminDto;
     private ProfileDto profileDto;
 
 }
