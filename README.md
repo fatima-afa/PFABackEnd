@@ -5,7 +5,7 @@
 <h2>Class Diagram</h2>
 <p>Here, we present the class diagram of the backend services. This diagram provides an overview of the key classes and their relationships, helping you understand the structure of our application.</p>
 <p>Because the diagram is large, I've decided to break it down into smaller sections. However, you can view the entire diagram via this link:</p>
-[View the Diagram](https://online.visual-paradigm.com/share.jsp?id=323231353133392d35)
+https://online.visual-paradigm.com/share.jsp?id=323231353133392d35
 <a href="https://imgcdn.dev/i/ZF2e0"><img src="https://s6.imgcdn.dev/ZF2e0.png" alt="ZF2e0.png" border="0"></a>
 <a href="https://imgcdn.dev/i/ZFOcM"><img src="https://s6.imgcdn.dev/ZFOcM.png" alt="ZFOcM.png" border="0"></a>
 <img src="https://s6.imgcdn.dev/ZF2e0.png" alt="ZF2e0.png" border="0"><img src="https://s6.imgcdn.dev/ZFZzd.png" alt="ZFZzd.png" border="0">
@@ -21,7 +21,7 @@
 <h4>Microservices Architecture</h4>
 <p>Our E-Banking application follows a microservices architecture to enhance scalability, maintainability, and flexibility. Spring Boot is utilized as the primary framework for building these microservices. Below is an overview of the microservices involved:</p>
 <a href="https://imgcdn.dev/i/ZFWgo"><img src="https://s6.imgcdn.dev/ZFWgo.png" alt="ZFWgo.png" border="0"></a>
-## Technologies Used
+<h4>Technologies Used</h4>
 
 - **Java:** We utilized Java as the primary programming language for building our backend services.
 
