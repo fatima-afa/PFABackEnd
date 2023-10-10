@@ -6,9 +6,10 @@
 <p>Here, we present the class diagram of the backend services. This diagram provides an overview of the key classes and their relationships, helping you understand the structure of our application.</p>
 <p>Because the diagram is large, I've decided to break it down into smaller sections. However, you can view the entire diagram via this link:</p>
 https://online.visual-paradigm.com/share.jsp?id=323231353133392d35
-<a href="https://imgcdn.dev/i/ZF2e0"><img src="https://s6.imgcdn.dev/ZF2e0.png" alt="ZF2e0.png" border="0"></a>
-<a href="https://imgcdn.dev/i/ZFOcM"><img src="https://s6.imgcdn.dev/ZFOcM.png" alt="ZFOcM.png" border="0"></a>
-<img src="https://s6.imgcdn.dev/ZF2e0.png" alt="ZF2e0.png" border="0"><img src="https://s6.imgcdn.dev/ZFZzd.png" alt="ZFZzd.png" border="0">
+<br/>
+<a href="https://imgcdn.dev/i/ZF2e0"><img src="https://s6.imgcdn.dev/ZF2e0.png" alt="ZF2e0.png" border="0"></a><br/>
+<a href="https://imgcdn.dev/i/ZFOcM"><img src="https://s6.imgcdn.dev/ZFOcM.png" alt="ZFOcM.png" border="0"></a><br/>
+<img src="https://s6.imgcdn.dev/ZFZzd.png" alt="ZFZzd.png" border="0"><br/>
 <h2>Use Case Diagram</h2>
 <p>The use case diagram outlines the various actions and interactions that users and other system actors can perform within our E-Banking application. It provides a high-level view of how different functionalities are accessed and utilized.</p>
 <h4>Admin : </h4>
