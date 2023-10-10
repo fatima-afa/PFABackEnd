@@ -18,6 +18,7 @@ public class DeviseDto {
     private Double tauxEchange;
     private Statut statutDevise;
     private AdminDto adminDto;
-    private List<PaysDto> pays;
+//    private List<PaysDto> pays;
+    private PaysDto pays;
 
 }

@@ -9,25 +9,26 @@ import java.util.List;
 
 public interface deviseService {
 
-    //done
-//    DeviseDto saveDevise(DeviseDto deviseDto);
-
+    //enregistrer la devise et le pays concerné
     PaysDto saveDeviseWithPays(PaysDto paysDto);
 
-    //done
+    //recupérer une devise
     DeviseDto getDevise(Long id) throws DeviseNotFound;
 
+    //mis a jour du devise
     DeviseDto updateDevise(DeviseDto deviseDto) throws DeviseNotFound;
-    //done
+
+    //Lister tous les devise
     List<DeviseDto> listDevise();
 
+    //liste des devises avec leurs pays
     List<PaysDto> listDeviseWithPays();
 
+    //modifier la devise
     DeviseDto patchDevise(Long id, DeviseDto partialDeviseDto) throws DeviseNotFound;
 
+    //recupeer un devise en utilisant le pays
     PaysDto getDeviseByPays(Long id) throws DeviseNotFound;
-
-//    PaysDto getDeviseByPays(Long id) throws DeviseNotFound;
 
     List<DeviseDto> searchDevise(Long id);
 

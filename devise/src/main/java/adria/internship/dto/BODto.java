@@ -8,6 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -29,5 +31,9 @@ public class BODto {
     private AgenceDto agenceDto;
     private AdminDto adminDto;
     private ProfileDto profileDto;
+
+    private AbonneDto abonnes;
+    private MessageDto messages;
+
 
 }

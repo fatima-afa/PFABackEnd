@@ -14,6 +14,9 @@ import java.util.List;
 @NoArgsConstructor @ToString
 public class Abonne extends User{
 
+    @Transient
+    private String token;
+
     @ManyToOne
     @JoinColumn(name = "bo_id")
     private BO bo;

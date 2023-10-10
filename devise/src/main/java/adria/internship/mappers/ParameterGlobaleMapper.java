@@ -14,15 +14,21 @@ public class ParameterGlobaleMapper {
     private AdminMapper adminMapper;
     public ParameterGlobaleDto parameterGlobaleToDto(ParameterGlobale parameterGlobale) {
         ParameterGlobaleDto parameterGlobaleDto = new ParameterGlobaleDto();
-        BeanUtils.copyProperties(parameterGlobale, parameterGlobaleDto);
-        parameterGlobaleDto.setAdminDto(adminMapper.adminToDto(parameterGlobale.getAdmin()));
-        return parameterGlobaleDto;
+        if(parameterGlobale!=null) {
+            BeanUtils.copyProperties(parameterGlobale, parameterGlobaleDto);
+            parameterGlobaleDto.setAdminDto(adminMapper.adminToDto(parameterGlobale.getAdmin()));
+            return parameterGlobaleDto;
+        }
+        return null;
     }
 
-    public ParameterGlobale parameterGlobaleDtpToParameterGlobale(ParameterGlobaleDto parameterGlobaleDto) {
+    public ParameterGlobale parameterGlobaleDtoToParameterGlobale(ParameterGlobaleDto parameterGlobaleDto) {
         ParameterGlobale parameterGlobale = new ParameterGlobale();
-        BeanUtils.copyProperties(parameterGlobaleDto, parameterGlobale);
-        parameterGlobale.setAdmin(adminMapper.adminDtoToAdmin(parameterGlobaleDto.getAdminDto()));
-        return parameterGlobale;
+        if (parameterGlobaleDto!=null) {
+            BeanUtils.copyProperties(parameterGlobaleDto, parameterGlobale);
+            parameterGlobale.setAdmin(adminMapper.adminDtoToAdmin(parameterGlobaleDto.getAdminDto()));
+            return parameterGlobale;
+        }
+        return null;
     }
 }
