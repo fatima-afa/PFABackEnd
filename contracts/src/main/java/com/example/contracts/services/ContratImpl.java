@@ -24,13 +24,18 @@ public class ContratImpl implements ContratServ {
     private BOMapper boMapper;
 
     @Override
-    public ContratDto saveContrat(ContratDto contratDto) {
+    public ContratDto saveContratParticulier(ContratDto contratDto) {
         Contrat contrat=contratMapper.DtoTocontrat(contratDto);
         contrat.setBo(boMapper.boDtoTobo(contratDto.getBoDto()));
         contrat.setId(UUID.randomUUID().toString());
         Contrat savedContrat=contratRepository.save(contrat);
         log.info("contrat crated  :"+savedContrat);
         return contratMapper.contratToDto(savedContrat);
+    }
+
+    @Override
+    public ContratDto saveContratEntreprise(ContratDto contratDto) {
+        return null;
     }
 
     @Override

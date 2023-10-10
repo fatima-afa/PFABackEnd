@@ -30,7 +30,7 @@ public class ContractsApplication {
             contratDto.setNbMaxTransfert(60);
             contratDto.setNbMinTransfert(30);
             contratDto.setDateActivation(new Date());
-            log.info("contrat : "+contratService.saveContrat(contratDto));
+            log.info("contrat : "+contratService.saveContratParticulier(contratDto));
 
         };
     }

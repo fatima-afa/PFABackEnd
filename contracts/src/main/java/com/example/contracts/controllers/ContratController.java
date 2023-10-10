@@ -22,7 +22,7 @@ public class ContratController {
 
     @PostMapping("saveContrat")
     public ResponseEntity<ContratDto> saveContrat(@RequestBody ContratDto contratDto) {
-        ContratDto savedContrat = contratService.saveContrat(contratDto);
+        ContratDto savedContrat = contratService.saveContratParticulier(contratDto);
         return new ResponseEntity<>(savedContrat, HttpStatus.CREATED);
     }
 
